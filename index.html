@@ -4,13 +4,50 @@
         <meta charset= "UTF-8">
         <title> Portafolio de Kevin M Perez </title>
         <style>
+            /* Estilo para la columna azul izquierda */
+            .columna-izquierda {
+                position: fixed; /* Fija la columna en la pantalla */
+                left: 0;
+                top: 0;
+                width: 7%; /* Ancho de la columna */
+                height: 100vh; /* Altura completa de la ventana */
+                background-color: blue; /* Color de fondo azul */
+                z-index: 1; /* Asegura que esté por encima del fondo */
+            }
+
+            /* Estilo para la columna azul derecha */
+            .columna-derecha {
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 7%;
+                height: 100vh;
+                background-color: blue;
+                z-index: 1;
+            }
+
+            /* Estilo para el contenido principal */
+            .contenido {
+                margin-left: 7%; /* Deja espacio para la columna izquierda */
+                margin-right: 7%; /* Deja espacio para la columna derecha */
+                z-index: 2; /* Asegura que el contenido esté por encima de las columnas */
+            }
+
             h1 {
                 color: blue;
             }
         </style>
         </head>
         <body>
-            <h1 style="text-align: center;"> Hola, soy Kevin M Perez </h1>
+            <!-- Columna azul izquierda -->
+            <div class="columna-izquierda"></div>
+            <!-- Columna azul derecha -->
+            <div class="columna-derecha"></div>
+
+            <!-- Contenido principal centrado, con espacio para las columnas -->
+            <div class="contenido">
+                <h1 style="text-align: center;"> Hola, soy Kevin M Perez </h1>
                 <p style="text-align: center;"> Esta pagina se irá actualizando mientras avanzo en mi formación como programador. </p>
+            </div>
         </body>
 </html>
